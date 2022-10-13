@@ -192,6 +192,12 @@ const monthNames = [
   'December',
 ]
 
+document.querySelector(".searchInput").addEventListener("keyup",function(e){
+  if(e.key=="Enter")
+  {
+    getWeatherData();
+  }
+})
 const getWeatherData = async () => {
   // Use the try-catch block to handle errors
   try {
